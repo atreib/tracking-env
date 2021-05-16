@@ -1,8 +1,8 @@
 - Run `yarn run track-vehicle` for simulating vehicle gps tracking data
     - It is going to send a vehicle's new coordinate for each 2 seconds
-        - We're going to simulate a vehicle driving through IAPI (Porto Alegre)
+        - We're going to simulate a vehicle driving through Belém Novo (Porto Alegre - RS)
 - Run `yarn run new-route` for simulating a new route being created
-    - It is going to send a IAPI route (from Porto Alegre public transportation)
+    - It is going to send a Belém Novo route (from Porto Alegre, RS, public transportation)
 - Run `yarn run consume` for starting a rabbitmq consume for either new-route or track-vehicle
 
 - Every request sent by client must have a property named `client_key`, which is going to be an unique UUID for each client and it is going to be used for generating a unique id for every entity received from this client
