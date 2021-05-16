@@ -1,0 +1,16 @@
+{
+  "name": "tracking-simulator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "track-vehicle": "node src/track-vehicle.js",
+    "new-route": "node src/new-route.js",
+    "consume": "node src/consume.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.7.1",
+    "bcrypt": "^5.0.1",
+    "uuid": "^8.3.2"
+  }
+}

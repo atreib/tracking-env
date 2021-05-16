@@ -1,0 +1,15 @@
+- Run `yarn run track-vehicle` for simulating vehicle gps tracking data
+    - It is going to send a vehicle's new coordinate for each 2 seconds
+        - We're going to simulate a vehicle driving through IAPI (Porto Alegre)
+- Run `yarn run new-route` for simulating a new route being created
+    - It is going to send a IAPI route (from Porto Alegre public transportation)
+- Run `yarn run consume` for starting a rabbitmq consume for either new-route or track-vehicle
+
+- Every request sent by client must have a property named `client_key`, which is going to be an unique UUID for each client and it is going to be used for generating a unique id for every entity received from this client
+    - eg: client A sends a route with it's `origin_id` equals to 1
+        - client A unique `client_key` is ABC
+        - client A route's unique id is going to be `ABC-1`
+    - eg: client B sends a route with it's `origin_id` also equals to 1 (it was going to conflict in our database)
+        - client B unique `client_key` is CBA
+        - client B route's unique id is going to be `CBA-1`
+    - This is applied for all entities received (vehicle origin id, route origin id, etc...)
