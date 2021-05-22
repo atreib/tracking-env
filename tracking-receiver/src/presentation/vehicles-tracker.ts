@@ -1,7 +1,7 @@
-import { IVehiclesTracker } from '../domain/protocols/vehicles-tracker.protocols';
+import { IStoreTrackedVehicles } from '../domain/protocols/store-tracked-vehicles.protocols';
 
 export class VehiclesTracker {
-  constructor(private readonly _vehiclesTracker: IVehiclesTracker) {}
+  constructor(private readonly _vehiclesTracker: IStoreTrackedVehicles) {}
 
   track(): void {
     this._vehiclesTracker.track();

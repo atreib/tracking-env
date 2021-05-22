@@ -1,13 +1,13 @@
-import { IVehiclesTracker } from "../domain/protocols/vehicles-tracker.protocols";
+import { IStoreTrackedVehicles } from "../domain/protocols/store-tracked-vehicles.protocols";
 import { VehiclesTracker } from "./vehicles-tracker";
 
 interface ISutTypes {
   sut: VehiclesTracker;
-  vehiclesTrackerStub: IVehiclesTracker;
+  vehiclesTrackerStub: IStoreTrackedVehicles;
 }
 
-const makeVehiclesTrackerStub = (): IVehiclesTracker => {
-  class VehiclesTrackerStub implements IVehiclesTracker {
+const makeVehiclesTrackerStub = (): IStoreTrackedVehicles => {
+  class VehiclesTrackerStub implements IStoreTrackedVehicles {
     track(): void {}
   }
   return new VehiclesTrackerStub();
