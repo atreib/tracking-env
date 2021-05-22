@@ -6,9 +6,12 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn tsc",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts"
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+    "test": "jest --passWithNoTests --runInBand",
+    "test:ci": "yarn test -- --coverage"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
     "eslint": "^7.27.0",
@@ -17,7 +20,11 @@
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
+    "ts-jest": "^26.5.6",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.4"
   }
