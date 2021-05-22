@@ -19,6 +19,7 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'error',
+    'import/prefer-default-export': 'never',
   },
   settings: {
     'import/resolver': {
