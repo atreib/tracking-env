@@ -5,7 +5,6 @@ import { adaptTrackingData } from '../helpers/adapt-tracking-data';
 import { IQueue } from '../protocols/queue.protocols';
 import { ITrackingRepository } from '../protocols/tracking-repository.protocols';
 
-// TODO: Improve this class unit tests
 export class DbStoreTrackedVehicles implements IStoreTrackedVehicles {
   constructor(
     private readonly _queueName: string,
@@ -14,6 +13,7 @@ export class DbStoreTrackedVehicles implements IStoreTrackedVehicles {
   ) {}
 
   async track(): Promise<void> {
+    // TODO: Inject this callback as a class
     const trackedVehicleCallback = async (trackedMessage: string): Promise<void> => {
       const trackedData: ITrackingData = adaptTrackingData(trackedMessage);
       const { eventDeparture, latitude, longitude, plate, vehicleId, routeName, routeId } = trackedData;
