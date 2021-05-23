@@ -19,7 +19,9 @@ module.exports = {
       },
     ],
     'prettier/prettier': 'error',
-    'import/prefer-default-export': 'never',
+    'import/prefer-default-export': 'off',
+    'no-useless-constructor': 'off',
+    'no-underscore-dangle': 'off',
   },
   settings: {
     'import/resolver': {

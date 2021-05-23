@@ -1,3 +1,3 @@
 export interface IStoreTrackedVehicles {
-  track(): void;
+  track(): Promise<void>;
 }

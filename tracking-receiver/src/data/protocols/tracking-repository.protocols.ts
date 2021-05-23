@@ -1,10 +1,10 @@
-import { IVehicleData } from "../dtos/vehicle-data.dtos";
+import { IVehicleData } from '../dtos/vehicle-data.dtos';
 
-export interface ITrackingStore {
+export interface ITrackingRepository {
   /**
    * Updates a vehicle data on our tracking store
    * @param vehicle (IVehicleData) our updated vehicle data
    * @returns (boolean) operation's sucess
    */
-  updateVehicleData(vehicle: IVehicleData): boolean;
+  updateVehicleData(vehicle: IVehicleData): Promise<boolean>;
 }
