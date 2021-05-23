@@ -3,9 +3,9 @@ import { IStoreTrackedVehicles } from '../domain/protocols/store-tracked-vehicle
 export class VehiclesTracker {
   constructor(private readonly _vehiclesTracker: IStoreTrackedVehicles) {}
 
-  track(): void {
+  async track(): Promise<void> {
     try {
-      this._vehiclesTracker.track();
+      await this._vehiclesTracker.track();
     } catch (err) {
       // TODO: Create a middleware for logging errors
       // eslint-disable-next-line no-console

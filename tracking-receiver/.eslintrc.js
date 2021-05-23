@@ -22,6 +22,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-useless-constructor': 'off',
     'no-underscore-dangle': 'off',
+    'class-methods-use-this': 'off',
   },
   settings: {
     'import/resolver': {
