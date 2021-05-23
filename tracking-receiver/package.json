@@ -11,6 +11,7 @@
     "test:ci": "yarn test -- --coverage"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.5.17",
     "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.0",
@@ -25,5 +26,8 @@
     "ts-jest": "^26.5.6",
     "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "amqplib": "^0.8.0"
   }
 }
