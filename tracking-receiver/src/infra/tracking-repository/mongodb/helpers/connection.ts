@@ -5,6 +5,7 @@ let instance: Connection;
 
 export const getConnection = async (): Promise<Connection> => {
   if (!instance)
+    // TODO: Create env var for mongodb connection properties
     instance = await mongoose.createConnection(
       'mongodb://mongoadmin:mongoadmin@localhost/vehicle-tracking?authSource=admin',
       {
