@@ -45,10 +45,9 @@ describe('DbStoreTrackedVehicleMessage Test Suite', () => {
     const { sut, trackingRepoStub } = makeSut();
     const spyUpdate = jest.spyOn(trackingRepoStub, 'updateVehicleData');
 
-    const trackedMessage = MOCK_TRACKED_MESSAGE;
-    await sut.persist(trackedMessage);
+    await sut.persist(MOCK_TRACKED_MESSAGE);
 
-    const trackedData: ITrackingData = adaptTrackingData(trackedMessage);
+    const trackedData: ITrackingData = adaptTrackingData(MOCK_TRACKED_MESSAGE);
     const { eventDeparture, latitude, longitude, plate, vehicleId, routeName, routeId } = trackedData;
     const vehicleData: IVehicleData = {
       lastEvent: eventDeparture,
