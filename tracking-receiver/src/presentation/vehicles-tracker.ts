@@ -1,7 +1,7 @@
-import { IStoreTrackedVehicles } from '../domain/protocols/store-tracked-vehicles.protocols';
+import { ITrackVehicles } from '../domain/protocols/track-vehicles.protocols';
 
 export class VehiclesTracker {
-  constructor(private readonly _vehiclesTracker: IStoreTrackedVehicles) {}
+  constructor(private readonly _vehiclesTracker: ITrackVehicles) {}
 
   async track(): Promise<void> {
     try {

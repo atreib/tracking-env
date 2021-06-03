@@ -1,13 +1,13 @@
-import { IStoreTrackedVehicles } from '../domain/protocols/store-tracked-vehicles.protocols';
+import { ITrackVehicles } from '../domain/protocols/track-vehicles.protocols';
 import { VehiclesTracker } from './vehicles-tracker';
 
 interface ISutTypes {
   sut: VehiclesTracker;
-  vehiclesTrackerStub: IStoreTrackedVehicles;
+  vehiclesTrackerStub: ITrackVehicles;
 }
 
-const makeVehiclesTrackerStub = (): IStoreTrackedVehicles => {
-  class VehiclesTrackerStub implements IStoreTrackedVehicles {
+const makeVehiclesTrackerStub = (): ITrackVehicles => {
+  class VehiclesTrackerStub implements ITrackVehicles {
     // eslint-disable-next-line class-methods-use-this
     async track(): Promise<void> {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -1,5 +1,5 @@
-import { InternalError } from '../../domain/protocols/errors/internal.errors';
-import { InvalidJsonMessageError } from '../../domain/protocols/errors/invalid-json-message.errors';
+import { InternalError } from '../../domain/errors/internal.errors';
+import { InvalidJsonMessageError } from '../../domain/errors/invalid-json-message.errors';
 import { ITrackingData } from '../dtos/tracking-data.dtos';
 
 export const adaptTrackingData = (trackedMessage: string): ITrackingData => {
